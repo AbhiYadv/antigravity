@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent-1: var(--accent-1);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --color-bg-alt: var(--bg-alt);
+  --color-border-color: var(--border-color);
+  
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+:root {
+  --background: #0B0F19;
+  --foreground: #ffffff;
+  --accent-1: #00F0FF;
+  --accent-2: #8A2BE2;
+  --accent-3: #00FF87;
+  --bg-alt: #131A2B;
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-2 {
+  background: linear-gradient(135deg, var(--accent-3), var(--accent-1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(19, 26, 43, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+}
+
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+.logo-mark::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--background);
+  border-radius: 6px;
+}
+.logo-mark::before {
+  content: 'M';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  z-index: 10;
+  background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== LIGHT MODE ===== */
+body.light-mode {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --accent-1: #0284C7;
+  --accent-2: #7C3AED;
+  --accent-3: #059669;
+  --bg-alt: #FFFFFF;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .logo-mark::after {
+  background: var(--background);
+}
+
+/* Override Tailwind gray text utilities for light mode */
+body.light-mode .text-gray-400 { color: #475569 !important; }
+body.light-mode .text-gray-500 { color: #64748B !important; }
+body.light-mode .text-gray-300 { color: #334155 !important; }
+body.light-mode .text-gray-600 { color: #1E293B !important; }
+
+/* White text becomes dark in light mode */
+body.light-mode .text-white { color: #0F172A !important; }
+
+/* Backgrounds */
+body.light-mode .bg-background { background-color: #F8FAFC !important; }
+body.light-mode .bg-bg-alt { background-color: #FFFFFF !important; }
+body.light-mode .bg-black\/50,
+body.light-mode .bg-black\/60,
+body.light-mode .bg-black\/40,
+body.light-mode .bg-black\/80 {
+  background-color: rgba(241, 245, 249, 0.9) !important;
+}
+
+/* Borders */
+body.light-mode .border-border-color { border-color: rgba(0, 0, 0, 0.08) !important; }
+
+/* Contact button inversion */
+body.light-mode .bg-white.text-background {
+  background-color: #0F172A !important;
+  color: #F8FAFC !important;
+}
+
+/* Code blocks stay dark */
+body.light-mode pre { color: #334155 !important; }
+body.light-mode .font-mono { color: inherit; }
+

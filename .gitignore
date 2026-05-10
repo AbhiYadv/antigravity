@@ -2,21 +2,15 @@
 node_modules/
 maze-engine-app/node_modules/
 
-# Build output
-maze-engine-app/out/
+# Build output (regenerated from maze-engine-app)
+engine/
+
+# Next.js
 maze-engine-app/.next/
+maze-engine-app/out/
 
-# OS files
+# Misc
 .DS_Store
-Thumbs.db
-
-# Environment
+*.log
 .env
 .env.local
-
-# IDE
-.vscode/
-.idea/
-
-# Gemini
-.gemini/
