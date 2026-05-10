@@ -13,8 +13,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "How the MazeLabs Engine Works",
-  description: "From noisy operations data to replayable incident simulations.",
+  title: "MazeArt Technologies | Privacy-first AI for Technical Teams",
+  description: "Secure, practical, and privacy-first AI products for engineering operations and technical workflows.",
 };
 
 export default function RootLayout({

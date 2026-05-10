@@ -93,7 +93,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Product 1: Maze Copilot */}
               <Reveal delay={0.1}>
-                <Link href="#" className="block h-full glass-card p-10 rounded-2xl border border-border-color hover:border-accent-1/50 transition-colors group relative overflow-hidden">
+                <Link href="/products/maze-copilot" className="block h-full glass-card p-10 rounded-2xl border border-border-color hover:border-accent-1/50 transition-colors group relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent-1/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <h3 className="text-2xl font-bold mb-2">
                     <span className="text-accent-1">Maze Copilot</span> — Desktop AI Workspace

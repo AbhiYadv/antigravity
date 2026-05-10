@@ -14,7 +14,7 @@ export function NavBar() {
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
-          <Link href="/products/maze-engine" className="hover:text-white transition-colors">Product</Link>
+          <Link href="/products" className="hover:text-white transition-colors">Product</Link>
           <Link href="/features" className="hover:text-white transition-colors">Features</Link>
           <Link href="/docs/architecture" className="hover:text-white transition-colors">Architecture</Link>
           <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
