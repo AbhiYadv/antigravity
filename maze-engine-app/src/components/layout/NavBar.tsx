@@ -16,7 +16,7 @@ export function NavBar() {
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <Link href="/products" className="hover:text-white transition-colors">Product</Link>
           <Link href="/features" className="hover:text-white transition-colors">Features</Link>
-          <Link href="/docs/architecture" className="hover:text-white transition-colors">Architecture</Link>
+          <a href="/#technology" className="hover:text-white transition-colors">Architecture</a>
           <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
           <a href="/#security" className="hover:text-white transition-colors">Security</a>
           <a href="/#contact" className="px-6 py-2.5 rounded-lg bg-white text-background font-semibold hover:bg-accent-1 transition-colors">Contact</a>
