@@ -14,7 +14,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
         {/* Sidebar */}
         <aside className="w-full md:w-64 shrink-0 py-8 md:pr-8 md:border-r border-border-color overflow-y-auto hidden md:block sticky top-20 self-start max-h-[calc(100vh-80px)]">
-          <Link href="/architecture" className="text-xl font-bold mb-8 block hover:text-accent-1 transition-colors">
+          <Link href="/docs" className="text-xl font-bold mb-8 block hover:text-accent-1 transition-colors">
             Documentation
           </Link>
           <nav className="space-y-8">
@@ -27,7 +27,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
                   {section.items.map((item, itemIdx) => (
                     <li key={itemIdx}>
                       <Link
-                        href={`/architecture/${item.slug.join("/")}`}
+                        href={`/docs/${item.slug.join("/")}`}
                         className="text-sm text-gray-400 hover:text-accent-1 transition-colors block py-0.5"
                       >
                         {item.title}

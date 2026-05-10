@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { NavBar } from "@/components/layout/NavBar";
@@ -177,8 +177,136 @@ export default function Home() {
           </div>
         </section>
 
+        {/* INNOVATION & SECURITY SECTION */}
+        <section id="security" className="py-24 relative bg-black/40 border-y border-border-color section-divider">
+          <div className="container mx-auto px-8 max-w-6xl">
+            <div className="grid md:grid-cols-2 gap-16">
+              <Reveal>
+                <div className="inline-block px-3 py-1 mb-6 rounded-full border border-border-color bg-white/5 text-xs font-bold uppercase tracking-widest text-accent-1">
+                  Vision
+                </div>
+                <h2 className="text-3xl font-bold mb-6">What Makes Our Work Innovative</h2>
+                <div className="space-y-6 text-gray-400 leading-relaxed">
+                  <p>Mazeart Technologies is not building generic chatbot software. Our products focus on converting high-context technical work into structured, auditable, and actionable AI workflows.</p>
+                  <p><strong className="text-white">MazeLabs</strong> introduces a deterministic operational simulation model where internal knowledge can be transformed into EvidenceTrees, simulation states, decision branches, action ledgers, and debrief outputs. This allows technical teams to train on realistic scenarios while preserving privacy, provenance, and reproducibility.</p>
+                  <p><strong className="text-white">Maze Copilot</strong> focuses on live technical execution by bringing session context, role-specific assistance, and workflow support into a desktop workspace designed for real-time technical work.</p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <div className="inline-block px-3 py-1 mb-6 rounded-full border border-border-color bg-white/5 text-xs font-bold uppercase tracking-widest text-accent-3">
+                  Trust
+                </div>
+                <h2 className="text-3xl font-bold mb-6">Privacy-first by design.</h2>
+                <p className="text-gray-400 mb-8 leading-relaxed">
+                  Mazeart Technologies designs products with strong privacy and control principles. Our goal is to help customers use AI without losing ownership of their operational knowledge.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Customer-owned intelligence",
+                    "Privacy-first architecture",
+                    "Controlled data flow",
+                    "Secure handling of context",
+                    "No unnecessary exposure of docs",
+                    "Designed for private deployment",
+                    "Evidence-based outputs",
+                    "Separation of knowledge & execution"
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-accent-3/20 flex items-center justify-center shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-accent-3"></div>
+                      </div>
+                      <span className="text-sm font-medium text-gray-300">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT SECTION */}
+        <section id="contact" className="py-32 relative">
+          <div className="container mx-auto px-8 max-w-2xl text-center">
+            <Reveal>
+              <h2 className="text-4xl font-bold mb-4">Contact Mazeart Technologies</h2>
+              <p className="text-xl text-gray-400 mb-12">
+                For product inquiries, partnerships, early access, or enterprise discussions.
+              </p>
+            </Reveal>
+            
+            <Reveal delay={0.1}>
+              <ContactForm />
+            </Reveal>
+          </div>
+        </section>
+
       </main>
       <Footer />
+    </div>
+  );
+}
+
+function ContactForm() {
+  const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const company = formData.get("company")?.toString().trim() || "";
+    const message = formData.get("message")?.toString().trim() || "";
+
+    const subject = encodeURIComponent(`Website Inquiry from ${name}${company ? ' — ' + company : ''}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`
+    );
+
+    setStatus("sending");
+    window.location.href = `mailto:support@mazeart.co.in?subject=${subject}&body=${body}`;
+
+    setTimeout(() => {
+      setStatus("success");
+      setTimeout(() => setStatus("idle"), 5000);
+    }, 1500);
+  };
+
+  return (
+    <div className="glass-card p-8 md:p-10 rounded-2xl border border-border-color text-left">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-2">
+            <label htmlFor="name" className="text-sm font-bold text-gray-400 uppercase tracking-wider">Name</label>
+            <input type="text" id="name" name="name" required className="w-full bg-black/40 border border-border-color rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-1 transition-colors" />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="email" className="text-sm font-bold text-gray-400 uppercase tracking-wider">Email</label>
+            <input type="email" id="email" name="email" required className="w-full bg-black/40 border border-border-color rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-1 transition-colors" />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="company" className="text-sm font-bold text-gray-400 uppercase tracking-wider">Company</label>
+          <input type="text" id="company" name="company" className="w-full bg-black/40 border border-border-color rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-1 transition-colors" />
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="message" className="text-sm font-bold text-gray-400 uppercase tracking-wider">Message</label>
+          <textarea id="message" name="message" rows={5} required className="w-full bg-black/40 border border-border-color rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-1 transition-colors resize-y"></textarea>
+        </div>
+        <button 
+          type="submit" 
+          disabled={status !== "idle"}
+          className="w-full bg-white text-background font-bold py-4 rounded-lg hover:bg-accent-1 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {status === "idle" ? "Send Message" : status === "sending" ? "Opening email client..." : "Sent Successfully"}
+        </button>
+        {status === "success" && (
+          <div className="text-accent-3 text-sm font-medium text-center bg-accent-3/10 py-3 rounded-lg border border-accent-3/20">
+            Message prepared. Check your email client to send.
+          </div>
+        )}
+      </form>
     </div>
   );
 }
