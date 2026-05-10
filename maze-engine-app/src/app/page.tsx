@@ -539,7 +539,7 @@ function CTA() {
             MazeLabs converts the logs, tickets, runbooks, and RCAs you already have into private, evidence-driven war-room simulations.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/index.html#contact" className="px-8 py-3 rounded-lg bg-white text-background font-bold hover:bg-accent-1 transition-colors">Request Early Access</a>
+            <a href="/#contact" className="px-8 py-3 rounded-lg bg-white text-background font-bold hover:bg-accent-1 transition-colors">Request Early Access</a>
             <Link href="/features" className="px-8 py-3 rounded-lg bg-white/5 border border-border-color text-white font-bold hover:bg-white/10 transition-colors">Explore Features</Link>
           </div>
         </Reveal>

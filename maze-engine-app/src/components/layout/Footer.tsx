@@ -13,7 +13,7 @@ export function Footer() {
           <div className="flex gap-4">
             <Link href="/features" className="hover:text-accent-1 transition-colors">Features</Link>
             <Link href="/docs" className="hover:text-accent-1 transition-colors">Docs</Link>
-            <a href="/index.html#contact" className="hover:text-accent-1 transition-colors">Contact</a>
+            <a href="/#contact" className="hover:text-accent-1 transition-colors">Contact</a>
           </div>
         </div>
         <p>MazeLabs — Privacy-first operational simulation and incident readiness for technical teams.</p>
