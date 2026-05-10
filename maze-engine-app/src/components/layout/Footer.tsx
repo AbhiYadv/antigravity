@@ -11,8 +11,10 @@ export function Footer() {
             Mazeart Technologies
           </div>
           <div className="flex gap-4">
+            <Link href="/" className="hover:text-accent-1 transition-colors">Home</Link>
+            <Link href="/products/maze-engine" className="hover:text-accent-1 transition-colors">Product</Link>
             <Link href="/features" className="hover:text-accent-1 transition-colors">Features</Link>
-            <Link href="/docs" className="hover:text-accent-1 transition-colors">Docs</Link>
+            <Link href="/architecture" className="hover:text-accent-1 transition-colors">Architecture</Link>
             <a href="/#contact" className="hover:text-accent-1 transition-colors">Contact</a>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function DocPage({ params }: { params: { slug?: string[] } }) {
               <ul className="space-y-3">
                 {category.items.map((item, i) => (
                   <li key={i}>
-                    <Link href={`/docs/${item.slug.join("/")}`} className="text-accent-1 hover:underline text-sm font-medium flex items-center">
+                    <Link href={`/architecture/${item.slug.join("/")}`} className="text-accent-1 hover:underline text-sm font-medium flex items-center">
                       {item.title} <ChevronRight className="w-4 h-4 ml-1" />
                     </Link>
                   </li>
@@ -67,7 +67,7 @@ export default function DocPage({ params }: { params: { slug?: string[] } }) {
   return (
     <div className="max-w-3xl prose prose-invert prose-blue">
       <div className="flex items-center text-sm font-mono text-gray-500 mb-8">
-        <Link href={`/docs`} className="hover:text-accent-1">Docs</Link>
+        <Link href={`/architecture`} className="hover:text-accent-1">Architecture</Link>
         <ChevronRight className="w-4 h-4 mx-2" />
         <span>{currentCategory.title}</span>
         <ChevronRight className="w-4 h-4 mx-2" />
