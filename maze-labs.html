@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazeLabs | Operational Simulation Platform</title>
+    <meta name="description" content="MazeLabs converts internal documentation into interactive incident simulations and operational readiness training.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Product Page Specific Styles */
+        .product-hero {
+            padding-top: calc(var(--nav-height) + 6rem);
+            padding-bottom: 6rem;
+            text-align: center;
+        }
+        .product-hero-glow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(circle, var(--color-accent-2-glow) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .product-screenshot {
+            margin-top: 4rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            background: var(--color-bg-alt);
+            padding: 1rem;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            position: relative;
+            z-index: 1;
+        }
+        .mock-window {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: #000;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .feature-grid-large {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        .large-feature-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: var(--transition-normal);
+        }
+        .large-feature-card:hover {
+            border-color: var(--color-accent-2);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"></span>
+                Mazeart <span class="logo-tech">Technologies</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="mazelabs-features.html">Features</a>
+                <a href="engine/index.html">Engine</a>
+                <a href="index.html#security">Security</a>
+                <a href="index.html#contact" class="btn btn-primary nav-btn">Contact</a>
+                
+                <label class="theme-toggle" aria-label="Toggle Light/Dark Theme">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="section product-hero">
+        <div class="product-hero-glow"></div>
+        <div class="container relative z-1">
+            <div class="reveal">
+                <div class="section-badge" style="color: var(--color-accent-2); border-color: var(--color-accent-2-glow);">Operational Simulation</div>
+                <h1 style="margin-bottom: 1.5rem;"><span class="brand-accent-2-text">MazeLabs</span></h1>
+                <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">
+                    A simulation-based training and operational readiness platform for engineering, SRE, DevOps, and support teams.
+                </p>
+            </div>
+            
+            <div class="product-screenshot reveal" style="transition-delay: 0.2s;">
+                <div class="cc-header">
+                    <div class="cc-dots"><span></span><span></span><span></span></div>
+                    <div class="cc-title" style="color: var(--color-text-muted);">MAZELABS_SIMULATION_V1.0</div>
+                </div>
+                <div class="mock-window">
+                    <div>
+                        <p style="margin-bottom: 1rem; color: var(--color-accent-2);">> Converting runbooks to interactive state...</p>
+                        <p style="margin-bottom: 1rem;">> Loading deterministic evidence structures...</p>
+                        <p style="margin-bottom: 1rem;">> Generating war-room scenarios...</p>
+                        <div class="cc-status active" style="margin-top: 2rem; text-align: center;">Simulation Ready</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section bg-darker">
+        <div class="container section-container">
+            <div class="section-header reveal">
+                <h2>Real Practice for Real Operations</h2>
+                <p class="section-desc">Convert static documentation into deterministic, replayable scenarios that prepare your team for real incidents.</p>
+            </div>
+            
+            <div class="feature-grid-large reveal">
+                <div class="large-feature-card">
+                    <div class="tech-icon sim-icon"></div>
+                    <h3>Interactive Runbooks</h3>
+                    <p>Transform your internal SOPs, runbooks, and RCA documents into active simulations instead of passive reading material.</p>
+                </div>
+                <div class="large-feature-card">
+                    <div class="tech-icon evidence-icon"></div>
+                    <h3>Evidence-Backed Flows</h3>
+                    <p>Train teams on decision branches based on actual system evidence and action ledgers with deterministic AI outputs.</p>
+                </div>
+                <div class="large-feature-card">
+                    <div class="tech-icon debrief-icon"></div>
+                    <h3>Post-Session Debriefs</h3>
+                    <p>Generate automatic insights and readiness reports following a war-room simulation to reduce dependency on senior engineers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <div class="reveal">
+                <h2 style="margin-bottom: 2rem;">Prepare your team for the next incident.</h2>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="index.html#contact" class="btn btn-primary btn-lg">Request Early Access</a>
+                    <a href="engine/index.html" class="btn btn-secondary btn-lg">Explore the Engine</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-bottom" style="border: none; padding-top: 0;">
+                <p>&copy; 2026 Mazeart Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

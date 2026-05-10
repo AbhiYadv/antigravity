@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+maze-engine-app/node_modules/
+
+# Build output
+maze-engine-app/out/
+maze-engine-app/.next/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Gemini
+.gemini/

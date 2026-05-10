@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazeLabs Features | Privacy-First Operational Simulation</title>
+    <meta name="description" content="MazeLabs helps technical teams convert existing documentation, incident history, and cloud logs into evidence-driven simulations and P1 war-room drills.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .features-hero {
+            padding-top: calc(var(--nav-height) + 6rem);
+            padding-bottom: 6rem;
+        }
+        .hero-split-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin-top: 4rem;
+            align-items: center;
+        }
+        .hero-box {
+            background: var(--color-bg-alt);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        .hero-box-center {
+            border-color: var(--color-accent-2);
+            box-shadow: 0 0 30px var(--color-accent-2-glow);
+        }
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .use-case-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 3px solid var(--color-accent-1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"></span>
+                Mazeart <span class="logo-tech">Technologies</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="mazelabs-features.html">Features</a>
+                <a href="engine/index.html">Engine</a>
+                <a href="index.html#security">Security</a>
+                <a href="index.html#contact" class="btn btn-primary nav-btn">Contact</a>
+                
+                <label class="theme-toggle" aria-label="Toggle Light/Dark Theme">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="section features-hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container relative z-1 text-center reveal">
+            <div class="section-badge" style="color: var(--color-accent-2); border-color: var(--color-accent-2-glow);">Privacy-first operational readiness platform</div>
+            <h1 style="max-width: 900px; margin: 0 auto 1.5rem;">Turn your runbooks, logs, and RCAs into private incident simulation labs.</h1>
+            <p class="hero-subtitle" style="margin: 0 auto 2.5rem; max-width: 800px;">
+                MazeLabs helps technical teams convert existing documentation, incident history, telemetry, and cloud logs into evidence-driven simulations, P1 war-room drills, replayable troubleshooting paths, and measurable readiness scores — without exposing sensitive operational data to uncontrolled AI systems.
+            </p>
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="engine/index.html" class="btn btn-primary btn-lg">Explore the Engine</a>
+                <a href="index.html#contact" class="btn btn-secondary btn-lg">Request Early Access</a>
+            </div>
+            
+            <div class="hero-split-visual reveal" style="transition-delay: 0.2s;">
+                <div class="hero-box">
+                    <h4 style="color: var(--color-text-muted);">Messy Raw Inputs</h4>
+                    <ul style="list-style: none; text-align: left; margin-top: 1rem; color: var(--color-text-muted);">
+                        <li>- Runbooks</li>
+                        <li>- RCA docs</li>
+                        <li>- CloudWatch logs</li>
+                        <li>- Application logs</li>
+                        <li>- Tickets</li>
+                        <li>- Dashboards</li>
+                    </ul>
+                </div>
+                <div class="hero-box hero-box-center">
+                    <h4 class="brand-accent-2-text">MazeLabs Pipeline</h4>
+                    <ul style="list-style: none; text-align: left; margin-top: 1rem;">
+                        <li>> Vault</li>
+                        <li>> Log Compressor</li>
+                        <li>> Data Masking</li>
+                        <li>> EvidenceTree</li>
+                        <li>> Simulation Builder</li>
+                    </ul>
+                </div>
+                <div class="hero-box">
+                    <h4 style="color: var(--color-accent-3);">Simulation Outputs</h4>
+                    <ul style="list-style: none; text-align: left; margin-top: 1rem; color: var(--color-text-muted);">
+                        <li>+ War Room</li>
+                        <li>+ Simulation Lab</li>
+                        <li>+ Debrief</li>
+                        <li>+ Score</li>
+                        <li>+ Replay</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Feature Overview Section -->
+    <section id="overview" class="section bg-darker">
+        <div class="container section-container">
+            <div class="section-header reveal">
+                <h2>One platform for private operational readiness.</h2>
+                <p class="section-desc">MazeLabs is designed around a controlled evidence pipeline. It ingests operational knowledge, compresses noisy telemetry, masks sensitive data, builds structured evidence, generates realistic incident simulations, and measures how well teams respond under pressure.</p>
+            </div>
+            <div class="modules-grid reveal">
+                <div class="module-card"><h4>Secure Knowledge Vault</h4></div>
+                <div class="module-card"><h4>BYOK & Local LLM Support</h4></div>
+                <div class="module-card"><h4>Cloud & App Log Connectors</h4></div>
+                <div class="module-card"><h4>Log Compressor</h4></div>
+                <div class="module-card"><h4>Data Masking & Redaction</h4></div>
+                <div class="module-card"><h4>EvidenceTree Builder</h4></div>
+                <div class="module-card"><h4>Simulation Lab Generator</h4></div>
+                <div class="module-card"><h4>Agent-driven P1 War Room</h4></div>
+                <div class="module-card"><h4>Marketplace Simulation Packs</h4></div>
+                <div class="module-card"><h4>Readiness Scoring & Debrief</h4></div>
+                <div class="module-card"><h4>Replay & Timeline Analysis</h4></div>
+                <div class="module-card"><h4>Team Capability Testing</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Secure Knowledge Vault -->
+    <section class="section split-section">
+        <div class="container section-container">
+            <div class="split-grid">
+                <div class="split-col reveal">
+                    <h2>Keep operational knowledge inside a controlled vault.</h2>
+                    <div class="content-block">
+                        <p>MazeLabs stores uploaded documents, runbooks, SOPs, RCAs, support playbooks, topology notes, incident tickets, and extracted evidence inside a controlled customer knowledge vault. Sensitive operational context is preserved for simulation and training while reducing unnecessary exposure to external systems.</p>
+                        <ul class="styled-list">
+                            <li>Upload runbooks, SOPs, RCA documents, incident notes, architecture docs, and support playbooks</li>
+                            <li>Store extracted operational evidence in a structured vault</li>
+                            <li>Preserve source provenance for every evidence item</li>
+                            <li>Separate raw source material from AI-consumable evidence</li>
+                            <li>Keep sensitive documentation under customer control</li>
+                            <li>Designed for private deployment and enterprise data control</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="split-col reveal">
+                    <div class="dark-card" style="height: 100%; border-color: var(--color-accent-2);">
+                        <h4 style="margin-bottom: 1.5rem; color: var(--color-accent-2);">Vault Status</h4>
+                        <div style="font-family: monospace; color: var(--color-text-muted); line-height: 2;">
+                            [+] RCA-Payment-Gateway-Jan2026.pdf<br>
+                            [+] AWS-Topology-Diagram.md<br>
+                            [+] DB-Failover-SOP.txt<br>
+                            > Extracting Evidence... <span style="color: var(--color-accent-3);">[OK]</span><br>
+                            > Applying Masking... <span style="color: var(--color-accent-3);">[OK]</span><br>
+                            > Simulation Assets Ready: 14
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Connectors and Inputs -->
+    <section class="section bg-darker">
+        <div class="container section-container">
+            <div class="section-header reveal">
+                <h2>Connect the systems your teams already use.</h2>
+                <p class="section-desc">MazeLabs can work with operational inputs from documentation systems, cloud logs, application logs, incident tickets, and existing troubleshooting records. The goal is to reuse what teams already have instead of forcing them to manually write training content from scratch.</p>
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 1rem;">* Connectors are presented as product capabilities and roadmap-ready integrations.</p>
+            </div>
+            <div class="tech-cards reveal">
+                <div class="tech-card">
+                    <h3 style="color: var(--color-accent-1);">Document Uploads</h3>
+                    <p>Upload PDFs, Markdown files, runbooks, SOPs, RCAs, postmortems, support notes, and architecture docs.</p>
+                </div>
+                <div class="tech-card">
+                    <h3 style="color: var(--color-accent-1);">CloudWatch Logs</h3>
+                    <p>Pull AWS CloudWatch logs and convert raw telemetry into structured evidence for simulations.</p>
+                </div>
+                <div class="tech-card">
+                    <h3 style="color: var(--color-accent-1);">Application Logs</h3>
+                    <p>Ingest service logs, error traces, request paths, and runtime signals from application environments.</p>
+                </div>
+                <div class="tech-card">
+                    <h3 style="color: var(--color-accent-1);">Incident Tickets</h3>
+                    <p>Convert real incident tickets into reusable simulation scenarios.</p>
+                </div>
+                <div class="tech-card">
+                    <h3 style="color: var(--color-accent-1);">RCA & Postmortems</h3>
+                    <p>Turn past outage analysis into future training drills.</p>
+                </div>
+                <div class="tech-card">
+                    <h3 style="color: var(--color-accent-1);">Manual Evidence Entry</h3>
+                    <p>Let teams add curated signals, expected checks, recovery actions, and decision points.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BYOK, Local LLM -->
+    <section class="section">
+        <div class="container section-container">
+            <div class="section-header reveal">
+                <h2>Use the model strategy that matches your privacy requirements.</h2>
+                <p class="section-desc">MazeLabs is designed to support multiple model execution modes so teams can choose the right balance of privacy, cost, quality, and control.</p>
+            </div>
+            
+            <div class="modules-grid reveal">
+                <div class="module-card">
+                    <h4>Local LLM</h4>
+                    <p>Run supported open-source models locally or in a private environment for sensitive workflows.</p>
+                </div>
+                <div class="module-card">
+                    <h4>BYOK</h4>
+                    <p>Bring your own API key for providers like OpenAI, Anthropic Claude, or compatible gateways.</p>
+                </div>
+                <div class="module-card">
+                    <h4>Managed Provider Routing</h4>
+                    <p>Route selected tasks to supported providers based on configuration and policy.</p>
+                </div>
+                <div class="module-card">
+                    <h4>Provider Isolation</h4>
+                    <p>Keep model access separated from raw vault data and route only bounded, masked evidence where required.</p>
+                </div>
+                <div class="module-card" style="grid-column: 1 / -1;">
+                    <h4>Model-Agnostic Architecture</h4>
+                    <p>MazeLabs focuses on evidence, state, and validation so workflows are not locked to a single LLM provider.</p>
+                </div>
+            </div>
+            
+            <div class="reveal" style="margin-top: 3rem;">
+                <p><strong>Supported Providers:</strong> Claude, GPT, Gemini, OpenRouter-compatible models, Local open-source models, and Future private model deployments.</p>
+                <div class="section-badge" style="margin-top: 1rem; border-color: #FFCC00; color: #FFCC00;">Privacy Framing</div>
+                <p>LLMs should not see raw sensitive infrastructure documents by default. MazeLabs should provide controlled, masked, compressed, evidence-based context instead of dumping full documents and logs into the model.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Log Compressor -->
+    <section class="section bg-darker">
+        <div class="container section-container">
+            <div class="section-header reveal">
+                <h2>Compress noisy telemetry into evidence LLMs can actually use.</h2>
+                <p class="section-desc">Raw logs are too noisy, repetitive, and expensive for LLMs to process directly. MazeLabs includes a Log Compressor that reduces high-volume telemetry into structured evidence, incident signals, anomalies, timelines, entities, symptoms, and candidate failure points.</p>
+            </div>
+            
+            <div class="content-block reveal">
+                <p><strong>This is a core differentiator:</strong> Generic LLMs struggle with massive logs. MazeLabs compresses operational telemetry first, then lets AI reason over clean evidence instead of raw noise.</p>
+                
+                <ul class="styled-list" style="columns: 2;">
+                    <li>Deduplicate repeated log lines</li>
+                    <li>Extract error clusters</li>
+                    <li>Identify time windows and spike patterns</li>
+                    <li>Detect service, endpoint, host, region, database, queue, and dependency entities</li>
+                    <li>Build incident timelines</li>
+                    <li>Preserve source references</li>
+                    <li>Summarize symptoms without losing critical signals</li>
+                    <li>Convert raw logs into Evidence Packs</li>
+                    <li>Reduce token usage and model confusion</li>
+                    <li>Improve privacy by removing unnecessary raw context</li>
+                </ul>
+            </div>
+            
+            <div class="before-after-visual reveal">
+                <div class="visual-panel">
+                    <div class="visual-panel-title">Raw Logs (Before)</div>
+                    <div class="visual-panel-content" style="color: #FF5F56;">
+[ERROR] 10:04:01 db_conn timeout db-01a
+[ERROR] 10:04:01 db_conn timeout db-01a
+[ERROR] 10:04:02 db_conn timeout db-01a
+[ERROR] 10:04:02 db_conn timeout db-01a
+[ERROR] 10:04:02 API 500 /checkout
+[ERROR] 10:04:03 db_conn timeout db-01a
+... (x14,000 lines) ...
+                    </div>
+                </div>
+                <div class="visual-panel" style="border-color: var(--color-accent-3);">
+                    <div class="visual-panel-title" style="background: rgba(0,255,135,0.1); color: var(--color-accent-3);">Compressed Evidence (After)</div>
+                    <div class="visual-panel-content" style="color: var(--color-text);">
+Entity: db-01a
+Window: 10:04:01 - 10:04:15
+Symptom: Connection Timeout
+Cluster Size: 14,000+ events
+Cascading Impact: API 500 /checkout
+Confidence: High
+Evidence Weight: 0.95
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Data Masking -->
+    <section class="section split-section">
+        <div class="container section-container">
+            <div class="split-grid">
+                <div class="split-col reveal">
+                    <h2>Mask sensitive data before AI reasoning.</h2>
+                    <div class="content-block">
+                        <p>MazeLabs should include a privacy layer that detects and masks sensitive operational information before evidence is passed to model providers or simulation agents. The platform should prioritize customer control over what is exposed, retained, or used.</p>
+                        <ul class="styled-list">
+                            <li>Mask secrets, tokens, keys, IPs, hostnames, emails, customer IDs, internal URLs, and sensitive identifiers</li>
+                            <li>Keep raw source documents in the vault</li>
+                            <li>Pass only bounded, masked, simulation-relevant evidence to AI components</li>
+                            <li>Maintain source provenance without exposing unnecessary raw data</li>
+                            <li>Support configurable masking policies</li>
+                            <li>Reduce the blast radius of AI provider exposure</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="split-col reveal">
+                    <div class="dark-card" style="font-family: monospace;">
+                        <p style="color: var(--color-text-muted); text-decoration: line-through;">User email: admin@enterprise.internal</p>
+                        <p style="color: var(--color-accent-3);">User email: [REDACTED_EMAIL]</p>
+                        <br>
+                        <p style="color: var(--color-text-muted); text-decoration: line-through;">DB Host: prod-db-primary-10.4.2.1</p>
+                        <p style="color: var(--color-accent-3);">DB Host: [MASKED_HOST_ID_1]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. EvidenceTree Builder -->
+    <section class="section bg-darker text-center">
+        <div class="container section-container reveal">
+            <h2>Build deterministic evidence from messy operations data.</h2>
+            <p style="max-width: 800px; margin: 0 auto 2rem;">MazeLabs converts documents, logs, tickets, and RCAs into EvidenceTrees. EvidenceTrees organize what happened, what signals exist, what systems are affected, what checks should be performed, what hypotheses are plausible, and what actions are valid.</p>
+            <p><strong>This makes simulations replayable, auditable, and consistent.</strong></p>
+            
+            <div class="tech-list-grid justify-center" style="justify-content: center; margin-top: 2rem;">
+                <div class="tech-list-item">Source-linked nodes</div>
+                <div class="tech-list-item">Time-based incident flow</div>
+                <div class="tech-list-item">Valid / invalid paths</div>
+                <div class="tech-list-item">Replayable snapshots</div>
+                <div class="tech-list-item">Deterministic EvidencePacks</div>
+            </div>
+            
+            <div style="margin-top: 3rem; font-family: monospace; color: var(--color-accent-2); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; display: inline-block;">
+                Incident &rarr; Symptoms &rarr; Evidence &rarr; Checks &rarr; Hypotheses &rarr; Actions &rarr; Validation &rarr; Debrief
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Simulation Lab Generator -->
+    <section class="section">
+        <div class="container section-container">
+            <div class="split-grid align-center">
+                <div class="split-col reveal">
+                    <h2>Turn one incident into many training scenarios.</h2>
+                    <p>MazeLabs can transform a single RCA, incident ticket, or operational failure pattern into multiple simulation labs. A real incident can produce beginner, intermediate, and advanced variants with different symptoms, misleading signals, missing context, or time pressure.</p>
+                    <p><strong>Marketplace-ready concept:</strong> One real ticket can become 20 incident simulations for training, assessment, and team readiness.</p>
+                    <ul class="styled-list">
+                        <li>Generate multiple simulations from one incident source</li>
+                        <li>Create difficulty variants with branching paths</li>
+                        <li>Build role-specific simulations for SRE, DBRE, DevOps, support</li>
+                        <li>Enable internal marketplace of incident labs</li>
+                    </ul>
+                </div>
+                <div class="split-col reveal text-center">
+                    <div class="dark-card">
+                        <h4 style="margin-bottom: 1rem;">Source Incident Ticket</h4>
+                        <div style="font-size: 2rem; color: var(--color-accent-1); margin-bottom: 1rem;">&darr;</div>
+                        <h4 style="color: var(--color-accent-3);">20 Simulation Variants</h4>
+                        <p style="font-size: 0.8rem; margin-top: 1rem;">Beginner | Advanced | SRE Role | DevOps Role | Time-Pressure Mode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Simulation Playground & 11. War Room -->
+    <section class="section bg-darker">
+        <div class="container section-container">
+            <div class="split-grid">
+                <!-- 10. Playground -->
+                <div class="split-col reveal">
+                    <h2 style="color: var(--color-accent-1);">Simulation Playground</h2>
+                    <p><strong>Practice incidents before they happen again.</strong></p>
+                    <p>The Simulation Playground lets engineers investigate realistic incidents in a controlled environment. Users interact with evidence, ask questions, run checks, make decisions, escalate, recover, and validate outcomes.</p>
+                    <ul class="styled-list">
+                        <li>Scenario browser & difficulty levels</li>
+                        <li>Timed, guided, and assessment modes</li>
+                        <li>Evidence panel & Action ledger</li>
+                        <li>Hints and coaching controls</li>
+                    </ul>
+                </div>
+                <!-- 11. War Room -->
+                <div class="split-col reveal">
+                    <h2 style="color: var(--color-accent-2);">Agent-driven P1 War Room</h2>
+                    <p><strong>Test how your team handles a P1 outage.</strong></p>
+                    <p>Simulate pressure, incomplete evidence, stakeholder updates, escalation decisions, recovery actions, and cross-functional coordination. The War Room is an operational decision surface, not just a chat screen.</p>
+                    <ul class="styled-list">
+                        <li>Incident commander mode & Stakeholder rail</li>
+                        <li>Simulated pressure and urgency</li>
+                        <li>Agent-driven prompts and events</li>
+                        <li>Roles: IC, SRE, DBRE, Support, Customer, Evaluator</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Scoring & 13. Debrief -->
+    <section class="section">
+        <div class="container section-container">
+            <div class="split-grid">
+                <!-- 12. Scoring -->
+                <div class="split-col reveal">
+                    <h2>Measure operational capability, not course completion.</h2>
+                    <p>MazeLabs scores how teams investigate, decide, communicate, escalate, and recover. It is designed to measure operational readiness rather than passive learning.</p>
+                    <ul class="styled-list">
+                        <li>Time to identify affected system</li>
+                        <li>Quality of evidence gathering & Hypothesis discipline</li>
+                        <li>Escalation timing & Communication clarity</li>
+                        <li>Outputs: Readiness score, Skill gaps, Recommended labs</li>
+                    </ul>
+                </div>
+                <!-- 13. Debrief -->
+                <div class="split-col reveal">
+                    <h2>Replay every decision and improve the next response.</h2>
+                    <p>Every simulation ends with a structured debrief. Teams can review what they saw, what they missed, what they did, what they should have done, and how their response compared to the expected evidence path.</p>
+                    <ul class="styled-list">
+                        <li>Replay timeline & Action-by-action review</li>
+                        <li>Evidence missed & Wrong assumptions</li>
+                        <li>Coach notes & Team readiness trends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Marketplace -->
+    <section class="section bg-darker">
+        <div class="container section-container text-center reveal">
+            <h2>Build a marketplace of reusable incident labs.</h2>
+            <p style="max-width: 700px; margin: 0 auto 2rem;">MazeLabs should support reusable simulation libraries where teams can create, organize, share, and reuse incident labs. A single ticket, RCA, or known failure mode can become a reusable training package for multiple teams.</p>
+            <div class="tags-container" style="justify-content: center;">
+                <span class="tag">Aurora failover simulation pack</span>
+                <span class="tag">CloudWatch latency spike simulation</span>
+                <span class="tag">Kubernetes CrashLoopBackOff simulation</span>
+                <span class="tag">Payment DB replica lag simulation</span>
+                <span class="tag">API gateway 5xx spike simulation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. Core Architecture Flow -->
+    <section class="section">
+        <div class="container section-container reveal">
+            <div class="section-header">
+                <h2>From operational data to measurable readiness.</h2>
+            </div>
+            
+            <div class="pipeline-container">
+                <div class="pipeline-step">
+                    <h4>1. Ingest</h4>
+                    <p>Docs, logs, tickets</p>
+                </div>
+                <div class="pipeline-arrow">&rarr;</div>
+                <div class="pipeline-step">
+                    <h4>2. Vault</h4>
+                    <p>Secure storage</p>
+                </div>
+                <div class="pipeline-arrow">&rarr;</div>
+                <div class="pipeline-step">
+                    <h4>3. Compress</h4>
+                    <p>Reduce noise</p>
+                </div>
+                <div class="pipeline-arrow">&rarr;</div>
+                <div class="pipeline-step">
+                    <h4>4. Mask</h4>
+                    <p>Redact sensitive info</p>
+                </div>
+                <div class="pipeline-arrow">&rarr;</div>
+                <div class="pipeline-step">
+                    <h4>5. Evidence</h4>
+                    <p>Build EvidenceTrees</p>
+                </div>
+                <div class="pipeline-arrow">&rarr;</div>
+                <div class="pipeline-step">
+                    <h4>6. Simulate</h4>
+                    <p>Generate scenarios</p>
+                </div>
+                <div class="pipeline-arrow">&rarr;</div>
+                <div class="pipeline-step">
+                    <h4>7. War Room</h4>
+                    <p>Run P1/P0 drills</p>
+                </div>
+                <div class="pipeline-arrow">&rarr;</div>
+                <div class="pipeline-step">
+                    <h4>8. Score</h4>
+                    <p>Measure readiness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Privacy Differentiation & 17. Comparison Section -->
+    <section class="section bg-darker">
+        <div class="container section-container reveal">
+            <div class="section-header">
+                <h2>Why not just use an LMS, log tool, or chatbot?</h2>
+                <p class="section-desc"><strong>AI assistance without dumping your infrastructure into an LLM.</strong> MazeLabs builds masked, compressed, bounded evidence packs that allow AI components to assist with simulation safely. Raw docs stay in the vault.</p>
+            </div>
+            
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th>Generic LMS</th>
+                            <th>Log Tool</th>
+                            <th>Generic AI Chatbot</th>
+                            <th class="highlight-col brand-accent-1-text">MazeLabs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Converts RCAs into simulations</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Uses real operational evidence</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-yes">Yes</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Compresses raw logs for AI reasoning</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Masks sensitive operational data</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-yes">Yes (Manual)</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes (Automated)</td>
+                        </tr>
+                        <tr>
+                            <td>Builds replayable incident state</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Runs P1 war-room exercises</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Scores readiness and decisions</td>
+                            <td class="feature-yes">Basic Quiz</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Supports BYOK/local LLM</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Creates reusable incident labs</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Preserves source provenance</td>
+                            <td class="feature-no">No</td>
+                            <td class="feature-yes">Yes</td>
+                            <td class="feature-no">No</td>
+                            <td class="highlight-col feature-yes">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 18. Use Case Detail -->
+    <section class="section">
+        <div class="container section-container reveal">
+            <div class="section-header text-center" style="margin: 0 auto 4rem;">
+                <h2>Built for real operational workflows.</h2>
+            </div>
+            
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <h3 class="brand-accent-1-text">SRE Readiness</h3>
+                    <p>Practice real outages, dependency failures, latency spikes, and escalation paths.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3 class="brand-accent-1-text">DevOps Training</h3>
+                    <p>Turn deployment issues, cloud failures, CI/CD problems, and infra alerts into simulations.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3 class="brand-accent-1-text">Database Reliability</h3>
+                    <p>Simulate replica lag, failover, lock contention, query regressions, backup restore, and PITR incidents.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3 class="brand-accent-1-text">Platform Engineering</h3>
+                    <p>Train teams on Kubernetes, service mesh, observability, and internal platform failure modes.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3 class="brand-accent-1-text">Support Escalation</h3>
+                    <p>Prepare support engineers for customer-impacting incidents with realistic evidence and stakeholder pressure.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3 class="brand-accent-1-text">Engineering Onboarding</h3>
+                    <p>Convert internal docs into active simulations so new engineers learn how systems fail and recover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 19. Product Modules -->
+    <section class="section bg-darker">
+        <div class="container section-container reveal">
+            <div class="section-header text-center" style="margin: 0 auto 4rem;">
+                <h2>MazeLabs modules.</h2>
+            </div>
+            
+            <div class="modules-grid">
+                <div class="module-card"><h4>1. Vault</h4><p>Secure source and evidence storage.</p></div>
+                <div class="module-card"><h4>2. Connectors</h4><p>Bring in docs, logs, tickets, and RCA sources.</p></div>
+                <div class="module-card"><h4>3. Compressor</h4><p>Transform noisy telemetry into structured evidence.</p></div>
+                <div class="module-card"><h4>4. Masking Engine</h4><p>Remove sensitive context before model processing.</p></div>
+                <div class="module-card"><h4>5. EvidenceTree</h4><p>Build deterministic evidence maps from operational data.</p></div>
+                <div class="module-card"><h4>6. Simulation Builder</h4><p>Generate replayable troubleshooting scenarios.</p></div>
+                <div class="module-card"><h4>7. War Room</h4><p>Run live P1/P0 response simulations.</p></div>
+                <div class="module-card"><h4>8. Agent Harness</h4><p>Coordinate bounded AI agents inside controlled workflows.</p></div>
+                <div class="module-card"><h4>9. Debrief</h4><p>Review decisions, missed signals, and recovery quality.</p></div>
+                <div class="module-card"><h4>10. Scoring</h4><p>Measure readiness and role-specific capability.</p></div>
+                <div class="module-card"><h4>11. Marketplace</h4><p>Create and reuse incident simulation packs.</p></div>
+                <div class="module-card"><h4>12. Reporting</h4><p>Generate team capability and readiness reports.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20. CTA Section -->
+    <section class="section">
+        <div class="container text-center reveal">
+            <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1.5rem;">Build readiness from the incidents you already have.</h2>
+            <p style="font-size: 1.25rem; color: var(--color-text-muted); max-width: 700px; margin: 0 auto 3rem;">
+                MazeLabs turns your existing operational knowledge into private, replayable, measurable incident simulations.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Request Early Access</a>
+                <a href="engine/index.html" class="btn btn-secondary btn-lg">Explore the Engine</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-mark"></span>
+                        Mazeart <span class="logo-tech">Technologies</span>
+                    </a>
+                    <p>MazeLabs — Privacy-first operational simulation and incident readiness for technical teams.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <a href="maze-copilot.html">Maze Copilot</a>
+                        <a href="maze-labs.html">MazeLabs</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="mazelabs-features.html">Features</a>
+                        <a href="index.html#technology">Technology</a>
+                        <a href="index.html#security">Security</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mazeart Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
